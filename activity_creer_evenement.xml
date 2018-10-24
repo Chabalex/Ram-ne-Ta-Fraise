@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CreerEvenement"
+     >
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:background="@color/backgroundColor"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/fraise"
+            />
+
+        <Button
+            android:id="@+id/deconnexion"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/deconnexion" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutBot"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/backgroundColor"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <Button
+            android:id="@+id/creerEvenement"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dip"
+            android:background="@drawable/creerevenement_black"
+            android:contentDescription="@string/todo" />
+
+        <Button
+            android:id="@+id/mesEvenements"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mesevenements" />
+
+        <Button
+            android:id="@+id/mesamis"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/mesamis" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dip"
+        android:layout_marginBottom="100dip">
+
+        <EditText
+            android:id="@+id/nomEvenement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Nom de l'évènement"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:backgroundTint="@color/backgroundColor"/>
+
+        <Button
+            android:id="@+id/boutonDate"
+            android:layout_width="100dip"
+            android:layout_height="50dip"
+            android:layout_below="@+id/nomEvenement"
+            android:layout_alignLeft="@+id/nomEvenement"
+            android:text="Date" />
+
+        <Button
+            android:id="@+id/boutonHeure"
+            android:layout_width="100dip"
+            android:layout_height="50dip"
+            android:layout_alignLeft="@+id/nomEvenement"
+            android:layout_below="@+id/boutonDate"
+            android:text="HEURE" />
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="161dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/boutonDate"
+            android:layout_toRightOf="@+id/boutonDate"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/heure"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/boutonHeure"
+            android:layout_toRightOf="@+id/boutonHeure"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
